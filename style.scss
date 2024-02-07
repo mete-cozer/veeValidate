@@ -1,0 +1,52 @@
+//Neden owl kullanmamalıyız diye bi bakmıştım x) Glide.JS candır canandır
+@import 'owl.carousel/dist/assets/owl.carousel.css';
+
+// Dümenden SCSS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        input[type="checkbox"] {
+            appearance: none;
+            padding: 8px;
+            width: 14px;
+            border: 1px solid gray;
+            outline: 0;
+            &:checked{
+                background-color: green;
+            }
+            &.invalid {
+                offset: 0;
+                outline: 0;
+                border: 1px solid red;
+
+                &:focus,
+                &:active {
+                    border: 1px solid red;
+                }
+            }
+        }
+
+        .invalid {
+            offset: 0;
+            outline: 0;
+            border-color: red;
+
+            &:focus,
+            &:active {
+                border-color: red;
+            }
+        }
+    }
+}

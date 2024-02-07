@@ -1,0 +1,23 @@
+{
+  "name": "owlcarousel",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "@vee-validate/rules": "^4.12.5",
+    "@vitejs/plugin-vue": "^5.0.3",
+    "bootstrap": "^5.3.2",
+    "sass": "^1.70.0",
+    "vee-validate": "^4.12.5",
+    "vue": "^3.4.15",
+    "yup": "^1.3.3"
+  }
+}

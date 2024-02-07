@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 
+      Sanırım her şey doğru çalışıyor. ANCAK! Inputa giriş yapar yapmaz validate koşuyor. Günlerce uğraştım ama olmadı. 
+    -->
+    <!-- 
+      .Vue uzantılı dosyalar ile component oluşturabileceğimiz çakılı yapımız olsaydı bizim easycepteki gibi validasyon akışını net kurardım. 
+      Ancak partners projemiz kısıtları altında şimdilik bu noktaya gelebildim. Bu haliyle çözüm yolu var mıdır? Şuan bilemiyorum..
+    -->
+    <form @submit="onSubmit" novalidate method="post">
+      <input type="email" v-model="email" :class="{'invalid': errors.email}" />
+      <span>{{ errors.email }}</span>
+
+      <input type="password" v-model="password" autocomplete="off" :class="{'invalid': errors.password}" />
+      <span>{{ errors.password }}</span>
+
+      <select v-model="city" :class="{'invalid': errors.city}">
+        <option value="1" disabled selected>Erzincan</option>
+        <option value="2">Zonguldak</option>
+        <option value="3">İzmir</option>
+      </select>
+      <span>{{ errors.city }}</span>
+
+      <input type="checkbox" v-model="checkbox" :class="{'invalid': errors.checkbox}" />
+      <span>{{ errors.checkbox }}</span>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
